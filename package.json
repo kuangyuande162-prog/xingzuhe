@@ -1,0 +1,9 @@
+{
+  "name": "xingzuhe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "邢祖赫三维视觉设计作品集",
+  "type": "module",
+  "scripts": {"start": "node scripts/serve.mjs", "check": "node scripts/check.mjs"},
+  "engines": {"node": ">=20"}
+}

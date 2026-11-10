@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f2ed">
+  <meta name="description" content="邢祖赫的三维视觉设计作品集。以材质、光影与空间，呈现产品的细节与想象。探索产品渲染、空间表现与动态影像。">
+  <meta property="og:title" content="邢祖赫 · 3D 视觉设计作品集">
+  <meta property="og:description" content="让想象，真实可见。产品视觉 / 空间表现 / 动态影像">
+  <title>邢祖赫 XING ZUHE — 3D 视觉设计作品集</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="experience.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#work">跳到作品</a>
+  <header class="header">
+    <a class="identity" href="#top" aria-label="邢祖赫，返回首页"><span class="symbol" aria-hidden="true">✳</span><span>XING ZUHE<span class="identity-sub">邢祖赫 / 3D VISUAL DESIGNER</span></span></a>
+    <nav aria-label="主导航"><a href="#work">精选作品 <span>01</span></a><a href="#motion">动态影像 <span>02</span></a><a href="#about">关于我 <span>03</span></a></nav>
+    <a class="contact-link" href="#contact">聊聊合作 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="intro wrap" aria-labelledby="headline">
+      <div class="intro-top"><span class="eyebrow"><i></i> 产品视觉 · 空间表现 · 动态影像</span><span class="edition">SELECTED PORTFOLIO / 2026</span></div>
+      <div class="intro-content"><h1 id="headline">让想象，<br>真实可见<span class="dot">。</span></h1><div class="intro-aside"><p>我是邢祖赫，一名 3D 设计师。<br>用材质、光影与空间，<br>让产品的每一处细节，都有表达。</p><a class="text-link" href="#work">探索我的作品 <span aria-hidden="true">↓</span></a></div></div>
+    </section>
+    <figure class="hero wrap">
+      <img src="assets/images/006.jpg" width="2200" height="1650" alt="湖畔现代建筑与厨房空间的三维场景，室内暖光映照在平静水面上" fetchpriority="high">
+      <figcaption><span><small>FEATURED VISUAL / TCL</small>在光影之间，构建生活的想象。</span><span class="hero-index">01 — 06</span></figcaption>
+      <a class="hero-open" href="#work" aria-label="查看精选作品">↙</a>
+    </figure>
+    <div class="discipline wrap" aria-label="创作方向"><span>3D PRODUCT VISUALIZATION</span><span>ART DIRECTION</span><span>SPATIAL RENDERING</span><span>MOTION & AI</span></div>
+    <section class="work-section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-top"><span class="eyebrow">01 / SELECTED WORK</span><span class="section-note">从产品细节，到完整的视觉世界。</span></div>
+      <div class="section-heading"><h2 id="work-title">不同尺度，<br>同样专注。</h2><div class="filters" role="group" aria-label="按作品类别筛选"><button class="active" data-filter="all" aria-pressed="true">全部作品</button><button data-filter="product" aria-pressed="false">产品视觉</button><button data-filter="home" aria-pressed="false">家电场景</button><button data-filter="space" aria-pressed="false">空间表现</button></div></div>
+      <div class="project-grid" id="project-grid"></div>
+      <div class="archive-bar"><p>每一张画面，都是一次细节的推敲。</p><button class="text-link" id="archive-toggle" aria-expanded="false" aria-controls="archive">浏览完整作品库 <span>↗</span></button></div>
+      <div id="archive" hidden><div class="archive-head"><h3>完整作品库</h3><label>作品分组 <select id="brand-filter"><option value="all">全部分组</option><option>BKT</option><option>云米</option><option>晟力</option><option>驰腾</option><option>鼎晟</option></select></label><span id="archive-count" aria-live="polite"></span></div><div class="archive-grid" id="archive-grid"></div></div>
+    </section>
+    <section class="motion-section" id="motion" aria-labelledby="motion-title"><div class="wrap">
+      <div class="section-top"><span class="eyebrow">02 / IN MOTION</span><span class="section-note">3D ANIMATION / AI / EDITING</span></div>
+      <div class="motion-heading"><h2 id="motion-title">让产品<br><em>动起来。</em></h2><p>不止于静态。<br>以运动展现结构，用节奏讲述产品。<br>探索三维动画、AI 视觉与剪辑的更多可能。</p></div>
+      <div class="motion-grid" id="motion-grid"></div>
+      <button class="motion-more text-link" id="motion-toggle" aria-expanded="false">展开全部动态作品 <span>＋</span></button>
+      <div class="motion-grid motion-extra" id="motion-extra" hidden></div>
+    </div></section>
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <div class="section-top"><span class="eyebrow">03 / ABOUT ME</span><span class="section-note">BASED IN FOSHAN, CHINA</span></div>
+      <div class="about-layout"><div><h2 id="about-title">细节之中，<br>看见设计。</h2><p class="about-name">邢祖赫 <span>XING ZUHE</span></p><p class="about-bio">从建筑空间到消费产品，我持续探索三维视觉的表达方式。关注真实的材质、克制的光线，以及产品与环境之间的关系，让视觉既传递功能，也呈现感受。</p><div class="skill-tags"><span>产品与场景渲染</span><span>空间与灯光表现</span><span>电商视觉 / KV</span><span>动画与视频剪辑</span><span>三维团队统筹</span></div></div><div class="experience"><div class="experience-title">部分任职经历 <span>EXPERIENCE</span></div><div class="experience-row"><span>2025.11 — 2026.10</span><h3>广州 BKT<small>3D 设计高级主管</small></h3></div><div class="experience-row"><span>2024.11 — 2025.11</span><h3>深圳度点科技<small>渲染师</small></h3></div><div class="experience-row"><span>2023.12 — 2024.07<br>2019.06 — 2022.01</span><h3>佛山云米科技<small>3D 设计组长</small></h3></div><div class="experience-row"><span>2022.06 — 2023.12</span><h3>晟力广告公司<small>3D 设计组长</small></h3></div><div class="experience-row"><span>2018.03 — 2019.06</span><h3>广州鼎晟装饰设计<small>室内效果图表现</small></h3></div></div></div>
+    </section>
+    <section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><div class="contact-top"><span class="eyebrow"><i></i> LET’S CREATE SOMETHING</span><span>期待下一次有趣的创作。</span></div><a class="contact-cta" href="mailto:372111773@qq.com"><h2 id="contact-title">让好想法，<br>成为好作品。</h2><span aria-hidden="true">↗</span></a><div class="contact-bottom"><a href="mailto:372111773@qq.com">372111773@qq.com</a><button id="copy-email">复制邮箱 <span>↗</span></button><span>广东 · 佛山</span></div><p class="copy-status" id="copy-status" role="status"></p></section>
+  </main>
+  <footer class="footer wrap"><span>© 2026 邢祖赫 XING ZUHE</span><span>产品视觉 / 空间表现 / 动态影像</span><a href="#top">回到顶部 ↑</a></footer>
+  <dialog id="viewer" aria-label="作品查看器"><div class="viewer-shell"><header class="viewer-header"><div><p id="viewer-project"></p><h2 id="viewer-title"></h2></div><button id="viewer-close" aria-label="关闭作品查看器">关闭 <span>×</span></button></header><div class="viewer-stage" id="viewer-stage"></div><div class="viewer-bottom"><button id="viewer-prev" aria-label="上一件作品">← <span>上一件</span></button><p id="viewer-counter" aria-live="polite"></p><button id="viewer-next" aria-label="下一件作品"><span>下一件</span> →</button></div><p class="viewer-hint">← → 切换作品 · Esc 关闭</p></div></dialog>
+  <noscript><p class="noscript">请启用 JavaScript 查看分类作品与动态影像。您也可以通过邮箱 372111773@qq.com 联系我。</p></noscript>
+</body>
+</html>

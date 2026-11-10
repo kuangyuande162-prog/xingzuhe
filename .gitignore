@@ -1,0 +1,9 @@
+node_modules/
+.sites-runtime/
+.sites-checkout/
+.DS_Store
+Thumbs.db
+*.log
+*.tar.gz
+.env
+.env.*
