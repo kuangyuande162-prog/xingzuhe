@@ -1,5 +1,7 @@
 # 邢祖赫 · 3D 视觉设计作品集
 
+在线作品集：[https://kuangyuande162-prog.github.io/xingzuhe/](https://kuangyuande162-prog.github.io/xingzuhe/)
+
 以作品为中心的沉浸式网页：产品渲染、家电与场景、空间表现、三维动画及 AI 影像。
 
 ## 预览
@@ -27,6 +29,8 @@ npm start
 - `dist/content.js`：素材列表；`dist/assets/`：网页优化版本。
 - `npm run check`：检查素材路径、脚本语法与内容清单。
 
-发布目录为 `dist/`，可部署于静态网站托管平台。当前 GitHub 仓库保持私有；网站访问权限由托管平台单独控制。
+GitHub 仓库现为公开仓库，作品集通过 GitHub Pages 公开发布，无需登录即可浏览。Pages 发布来源为 `gh-pages` 分支的根目录（`/`）。
+
+`main` 分支保留完整源码，网页发布文件位于 `main/dist/`；`gh-pages` 分支的根目录保存可直接部署的网页文件。后续更新需要将 `main/dist/` 的内容同步到 `gh-pages` 根目录，提交后由 GitHub Pages 发布。仅修改 `main` 分支不会自动更新在线网页。
 
 图片最长边 2200px，缩略图最长边 900px；视频为 H264 MP4，支持流式播放。原始素材与原始简历未放入项目，个人生日及电话未展示。作品中的品牌标识属于其权利人，作品用于个人经历与创作展示，未经许可请勿转载。
