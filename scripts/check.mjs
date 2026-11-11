@@ -18,7 +18,7 @@ for(const item of all){
 for(const filename of ['app.js','experience.js','content.js'])new vm.Script(fs.readFileSync(path.join(dist,filename),'utf8'),{filename});
 const html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
 for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
-  const url=match[1];if(!/^(mailto:|https?:)/.test(url)&&!fs.existsSync(path.resolve(dist,url)))errors.push(`Missing page resource ${url}`);
+  const url=match[1];if(!/^(mailto:|tel:|https?:)/.test(url)&&!fs.existsSync(path.resolve(dist,url)))errors.push(`Missing page resource ${url}`);
 }
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
 if(new Set(ids).size!==ids.length)errors.push('Duplicate element ID');
