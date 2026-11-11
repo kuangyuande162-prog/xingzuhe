@@ -442,24 +442,28 @@
   }, { passive: true });
   stage?.addEventListener('touchcancel', () => { swipeStart = null; }, { passive: true });
 
-  $('#copy-email')?.addEventListener('click', async () => {
-    const address = '372111773@qq.com';
-    const status = $('#copy-status');
-    try {
-      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
-      await navigator.clipboard.writeText(address);
-      if (status) status.textContent = '邮箱已复制，期待与你联系。';
-    } catch {
-      const link = $('.contact-bottom a[href^="mailto:"]');
-      if (link && window.getSelection) {
-        const range = document.createRange();
-        range.selectNodeContents(link);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
+  [
+    { button: '#copy-email', value: '372111773@qq.com', label: '邮箱', target: '.contact-bottom a[href^="mailto:"]' },
+    { button: '#copy-wechat', value: 'JMNX_XZH', label: '微信号', target: '#wechat-id' }
+  ].forEach(({ button, value, label, target }) => {
+    $(button)?.addEventListener('click', async () => {
+      const status = $('#copy-status');
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(value);
+        if (status) status.textContent = `${label}已复制，期待与你联系。`;
+      } catch {
+        const text = $(target);
+        if (text && window.getSelection) {
+          const range = document.createRange();
+          range.selectNodeContents(text);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+        if (status) status.textContent = `${label}已选中，请长按或手动复制。`;
       }
-      if (status) status.textContent = '邮箱已选中，请复制；也可点击邮箱直接发送邮件。';
-    }
+    });
   });
 
   function revealHashTarget() {
